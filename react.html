@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react Jobs - Job Scraper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .source-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .job-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .job-link:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🔍 Job Scraper</h1>
+        <p>잡코리아, 사람인, 원티드에서 채용 공고를 스크래핑합니다</p>
+    </div>
+    <nav class="nav">
+        <a href="index.html" role="button">← 돌아가기</a>
+        <a href="python.html" role="button">🐍 Python</a>
+        <a href="react.html" role="button">🎇React</a>
+        <a href="javascript.html" role="button">⚡ JavaScript</a>
+        <a href="java.html" role="button">☕ Java</a>
+        <a href="go.html" role="button">🏃‍♀️ Go</a>
+        <a href="react-jobs.csv" download role="button">💾 CSV로 내보내기</a>
+    </nav>
+    <main>
+        <h2>React 채용 공고</h2>
+        <div class="stats">
+            <p>총 228개의 공고가 검색되었습니다.</p>
+            <p><small>마지막 업데이트: 2025-11-11 00:01:56</small></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>출처</th>
+                    <th>직무</th>
+                    <th>회사</th>
+                    <th>경력</th>
+                    <th>설명</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자</td>
+                    <td>레디포스트</td>
+                    <td>경력 4-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320024" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>모바일 앱 개발자(React Native) (2~5년)</td>
+                    <td>낭만상회</td>
+                    <td>경력 2-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320303" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 ReactNative 프로덕트 엔지니어 (2년 이상)</td>
+                    <td>슬로그업</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320180" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Casino Platform Frontend Developer(React Web)</td>
+                    <td>앤서스랩코리아</td>
+                    <td>경력 4년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/305975" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>반도체·스마트팩토리 물류 제어 S/W 프론트 개발자(React)</td>
+                    <td>주밍코리아</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306476" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React Native 개발 담당</td>
+                    <td>미니쉬테크놀로지</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/307326" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React, Next.js 웹 프론트 개발자 (4~5년)</td>
+                    <td>루트업</td>
+                    <td>경력 4-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319695" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[라이브클래스] Front-End Engineer (Senior)</td>
+                    <td>퓨쳐스콜레</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/305626" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 프론트엔드 개발자 (5년차 이상)</td>
+                    <td>뉴스젤리(Newsjelly)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296319" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 개발자</td>
+                    <td>아르크리에이티브허브</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316711" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자 (블록체인)</td>
+                    <td>넥써쓰</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/273425" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>BizOps Software Engineer (8년 차 이상)</td>
+                    <td>와드(캐치테이블)</td>
+                    <td>경력 8년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313559" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>SvelteKit 프론트엔드 개발자</td>
+                    <td>알리콘</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/265268" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자 (3년이상)</td>
+                    <td>이오스시스템</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/314668" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 개발자 (API Product)</td>
+                    <td>네오사피엔스(타입캐스트)</td>
+                    <td>경력 7년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315369" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[연구개발부문] Frontend Senior 개발자</td>
+                    <td>크라우드웍스</td>
+                    <td>경력 10년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/317946" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹(NextJS) 및 앱(React Native) 개발자</td>
+                    <td>왈로우</td>
+                    <td>경력 3-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313602" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React + TypeScript 기반 시스템 개발</td>
+                    <td>엑스코어시스템</td>
+                    <td>경력 5-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319597" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 백엔드 개발자 (5년차 이상)</td>
+                    <td>뉴스젤리(Newsjelly)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296313" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 웹 개발자 React.js / Next.js (3~5년)</td>
+                    <td>클라우드호스피탈</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/207121" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>ReactNative/React 프론트 개발자 (3년 이상)</td>
+                    <td>페이워크</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/150575" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Senior Front-end Software Engineer</td>
+                    <td>제이앤피메디(JNPMEDI)</td>
+                    <td>경력 8-30년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/291970" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>클라이언트 프론트 앤드 개발자</td>
+                    <td>브레인</td>
+                    <td>신입 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320419" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자 (3년 ~ 5년)</td>
+                    <td>제로백데브</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/275265" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[노코드 웹빌더 스쿼드] Front-End Engineer</td>
+                    <td>아임웹</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/274816" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자(5년이상)</td>
+                    <td>다이퀘스트</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/314077" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Software Engineer(Full-stack - Backend Focus)</td>
+                    <td>알세미</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313799" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React Native Engineer</td>
+                    <td>매스프레소(콴다)</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/297394" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>App 개발(React Native)</td>
+                    <td>솔닥</td>
+                    <td>경력 1-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/321020" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Frontend Developer (React)</td>
+                    <td>일레븐플러스코리아</td>
+                    <td>경력 3-12년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/321098" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Frontend Engineering Team Lead</td>
+                    <td>데이블(Dable)</td>
+                    <td>경력 8-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/310876" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹(NextJS) 및 앱(React Native) 개발자</td>
+                    <td>워로브라더스</td>
+                    <td>경력 3-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313590" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[개발본부] 웹 풀스택 개발자(5년 이상)</td>
+                    <td>빅밸류</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/276486" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드/퍼블리싱</td>
+                    <td>페이시</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/309709" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>네트워크 장비 Web Management 솔루션 개발</td>
+                    <td>파이오링크</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/253444" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 개발자 (3년 이상)</td>
+                    <td>가이드웨이 컨설팅</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312985" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Web Full Stack 개발자</td>
+                    <td>디메타</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316719" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>대기업 브랜드 콘텐츠 품질 자동화 검수 Tool 개발</td>
+                    <td>펑타이그레이터차이나(PTKOREA)</td>
+                    <td>경력 2-3년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312293" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React기반 Android App 개발자 (5년 이상)</td>
+                    <td>브라운백</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319054" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React , PHP 개발자</td>
+                    <td>이랜서</td>
+                    <td>경력 7년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306882" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 개발자</td>
+                    <td>커넥트밸류</td>
+                    <td>경력 8년 이상 · 계약직</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/317924" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자</td>
+                    <td>페이블랩</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/309705" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>스포츠테크 프로덕트 디자이너</td>
+                    <td>리액트피크</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/317587" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>앱 개발자 (React Native, 2년 이상)</td>
+                    <td>코딧(CODITCorp.)</td>
+                    <td>경력 2-4년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/135520" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자 (리더, React.js 5년 이상)</td>
+                    <td>코딧(CODITCorp.)</td>
+                    <td>경력 5-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/93806" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[AI 헬스케어] React Native 앱 개발자</td>
+                    <td>바이오컴</td>
+                    <td>경력 5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/308367" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>WTS 프론트엔드 개발자(시니어)</td>
+                    <td>카카오페이증권(kakaopay증권)</td>
+                    <td>경력 7년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296429" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 기반 한국어 교육 앱 React Native 개발자</td>
+                    <td>오늘의웹툰</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/297628" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React Native Developer</td>
+                    <td>비바이노베이션</td>
+                    <td>경력 3-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/311997" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Full Stack Developer (DevOps Platform)</td>
+                    <td>오케스트로</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318796" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Software Engineer (Frontend)</td>
+                    <td>스튜디오씨드코리아(프로토파이)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/264588" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 네이티브 웹 엔지니어 (AI Native Web Engineer)</td>
+                    <td>뱅크샐러드</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306865" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React Native 앱 개발자</td>
+                    <td>아이엔지스토리</td>
+                    <td>경력 6-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312364" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Tech Lead</td>
+                    <td>트리플렛</td>
+                    <td>경력 5-35년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/135822" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>iOS Engineer(ReactNative)_Web3 월렛 서비스 개발</td>
+                    <td>두나무(업비트/증권플러스)</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320020" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>홀덤 게임 서버 개발자 (3년 이상)</td>
+                    <td>러너소프트</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315363" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>시니어 프론트엔드 엔지니어</td>
+                    <td>엘리스</td>
+                    <td>경력 5-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/229818" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[시니어] 프론트 개발자(React / React Native) (5~7년)</td>
+                    <td>낭만상회</td>
+                    <td>경력 5-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/262741" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>모의침투 및 소스진단 담당자 (주니어)</td>
+                    <td>빗썸</td>
+                    <td>경력 1-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/285037" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>SEO 자동화 풀스택 개발자 (Next.js + Python)</td>
+                    <td>홍플레이스</td>
+                    <td>경력 1-20년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315142" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Fullstack SW Engineer</td>
+                    <td>딥메트릭스</td>
+                    <td>경력 4-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318508" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 개발자</td>
+                    <td>데이터드리븐</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315077" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React-Native 앱 개발자</td>
+                    <td>띵라이브</td>
+                    <td>경력 3년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/303284" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>XR Engineer</td>
+                    <td>아키스케치</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318730" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>개발팀장 (React Native + Node.js 개발, 5년 이상)</td>
+                    <td>더블유클럽</td>
+                    <td>경력 4-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/191442" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Senior Fullstack Software Engineer</td>
+                    <td>제이앤피메디(JNPMEDI)</td>
+                    <td>경력 8-30년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/291964" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>모바일 앱 개발자(React Native / Web3 지갑)</td>
+                    <td>파이랩테크놀로지</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/286705" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[야핏무브] React Native 개발자</td>
+                    <td>야나두</td>
+                    <td>경력 4-6년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/321414" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[신사업] 큐리AI - 프론트엔드 개발자 (Next.js / React)</td>
+                    <td>미션드리븐</td>
+                    <td>신입-경력 5년 · 계약직</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/321383" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React Front-End 개발자 (Cloud &amp; MLOps)</td>
+                    <td>다키클라우드코리아</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318131" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>플랫폼 서비스 앱 개발자 (React Native)</td>
+                    <td>엠피에이지(MPAG)</td>
+                    <td>경력 5-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/262642" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>축구 iot 장비 개발자</td>
+                    <td>리액트피크</td>
+                    <td>경력 1-4년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/277944" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>글로벌 모바일 개발자 (React Native)</td>
+                    <td>카카오뱅크(kakaobank)</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/270068" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React 프론트엔드 개발자 (3~5년차)</td>
+                    <td>어나더닥터</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316097" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[포카마켓] React 프론트엔드 개발자 (3-5년)</td>
+                    <td>인플루디오</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319981" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>IaaS 플랫폼 개발</td>
+                    <td>이노그리드</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319320" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>React, ReactNative 기반 프론트엔드 개발자</td>
+                    <td>레인포컴퍼니</td>
+                    <td>경력 2-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318123" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Front-end 개발 (5년 이상)</td>
+                    <td>엔카닷컴</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/308851" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자 (TypeScript, React)</td>
+                    <td>미스터블루</td>
+                    <td>경력 2-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315513" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자(신입~3년차)</td>
+                    <td>케이존</td>
+                    <td>신입-경력 3년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/317884" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Software Engineer (Frontend)</td>
+                    <td>레브잇</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/308560" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[인턴] [SW] 프론트엔드 개발자 (React.js)</td>
+                    <td>코딧(CODITCorp.)</td>
+                    <td>신입 · 인턴</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313336" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>프론트엔드 개발자(React)</td>
+                    <td>피노키오랩</td>
+                    <td>경력 2-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/193439" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 프론트엔드 개발자(3~5년)</td>
+                    <td>딥메디</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/314972" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>웹개발자 /Reactjava 개발 신입사원 채용</td>
+                    <td>(주)에스티엔인포텍</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52159699&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React·Next.js 프론트엔드 개발자 채용</td>
+                    <td>스마트핀텍(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51909323&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[신입/경력]React/Spring Boot 기반 개발자 채용 (면접비 지급)</td>
+                    <td>(주)데이터유니버스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51793548&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 솔루션 프론트엔드(React) 개발자 채용 (3년 이상)</td>
+                    <td>(주)퀸텟시스템즈</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52019054&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백엔드(spring) / 프론트엔드(react/vue) 개발자 모집</td>
+                    <td>(주)아이스크림미디어</td>
+                    <td>경력 8~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51899295&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React·Next.js 프론트엔드 경력직 개발자 채용</td>
+                    <td>스마트핀텍(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51862518&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[React/ReactNative · Java/Spring] 프론트엔드·백엔드 개발</td>
+                    <td>(주)비즈비</td>
+                    <td>경력 1~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51994604&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Front/BackEnd UI/UX 개발자 모집(React/Python)</td>
+                    <td>(주)유엠아이옵틱스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52106733&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[비즈피어] 프론트엔드(Front-end) 개발자모집 (React)</td>
+                    <td>비즈피어(주)</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52097389&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 채용솔루션 풀스택 개발자(NestJS,React)</td>
+                    <td>(주)인딥에이아이</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52055071&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[정규직/경력] 2025년 프론트엔드 개발 구인 (React/ Vue)</td>
+                    <td>(주)돔팸</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52178301&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Java / Spring / Jsp /React개발자 채용 공고(경력직)</td>
+                    <td>(주)다이나시스템</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52013475&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[근무지: 부산 해운대구] SI (React) 개발자 모집 ( 중급)</td>
+                    <td>(주)제이케이데이터시스템즈</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52189905&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드(React) 경력직 개발자채용</td>
+                    <td>(주)아뮤즈</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52217846&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Frontend Developer (React)</td>
+                    <td>(주)디렉셔널</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52159707&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>대기업 플랫폼 구축React풀스택 개발자 채용</td>
+                    <td>(주)아이이에이</td>
+                    <td>경력8년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52243042&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>SI (React) 개발자 모집 ( 중급)</td>
+                    <td>(주)제이케이데이터시스템즈</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52264968&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>제스트(주) 프론트엔드React개발자 모집</td>
+                    <td>제스트(주)</td>
+                    <td>경력10년↓</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51987303&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>시니어 리액트 네이티브 &amp; 프론트엔드 개발자 채용</td>
+                    <td>(주)써틴컴퍼니</td>
+                    <td>경력 5~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52032401&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 웹개발자React.js 모십니다</td>
+                    <td>(주)애드크림</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52109812&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (React.js 2년이상)</td>
+                    <td>(주)코딧</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51067870&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>대기업 내부 시스템 구축React개발자 채용</td>
+                    <td>(주)아이이에이</td>
+                    <td>경력 6~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52253188&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>KS오토플랜 웹ㆍ앱React개발자 채용</td>
+                    <td>(주)케이에스오토플랜</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52110397&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[ReactNative] 프론트엔드 개발자 채용</td>
+                    <td>(주)에스제이소프트텍</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52208174&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>JAVA/React/VUE 직원(정규/프리) 모집</td>
+                    <td>위쉬정보기술㈜</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52164958&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[프론트엔드]React개발자 모집</td>
+                    <td>리디안랩스(주)</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52019893&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>네이티브/리액트 (Native/React) 모바일앱 개발자 모십니다</td>
+                    <td>(주)케이엘피</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52251081&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 웹개발자React.js 모집</td>
+                    <td>(주)애드크림</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52132051&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[씨엔넷]React프론트엔드 개발자 - 경력직</td>
+                    <td>(주)씨엔넷</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51846430&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자(웹/앱) 공개 채용 (Vue/React-Native)</td>
+                    <td>(주)이음</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52232078&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (React/ Next.js / Python)</td>
+                    <td>예진(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52269812&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React/NextJS 프론트엔드 개발자 채용</td>
+                    <td>주식회사미스터디벨로(Mr.DevelloInc.)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52209595&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(경력) 웹 개발자(React, Next.js)</td>
+                    <td>샐링잇</td>
+                    <td>경력 1~3년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52230472&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[글로벌 AI SaaS]ReactNative 앱 개발자 모집</td>
+                    <td>(주)유어라운드</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52253002&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자(React)</td>
+                    <td>주식회사일레븐플러스코리아</td>
+                    <td>경력 2~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52065652&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[ReactNative] 복덕빵 앱 프론트엔드 개발자 채용</td>
+                    <td>레이라(주)</td>
+                    <td>경력 1~3년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52026389&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>의료 AI 기업 어나더닥터React프론트엔드 경력 개발자 모집</td>
+                    <td>주식회사어나더닥터(AnotherDoctorCorp.)</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52096817&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[웹개발]React.js 개발 경력자 채용(React.js 최소 3년 이상)</td>
+                    <td>(주)큐브코아</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52251942&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)티온컴퍼니 라라벨 리액트 웹 개발자 채용</td>
+                    <td>(주)티온컴퍼니</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51829538&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[프론트엔드]ReactNative / Web UI 개발자</td>
+                    <td>(주)링커버스</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52096550&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=633137fa-31e4-4a93-9630-8f9543bc506f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>리액트 기반 풀스택 개발자 채용</td>
+                    <td>(주)옳은일</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52226133&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[모바일]ReactNative 앱 개발자 (정규직)</td>
+                    <td>(주)되고시스템</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52237084&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NHN] 웹 프론트엔드 개발</td>
+                    <td>엔에이치엔(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52082075&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ReactNative 풀스택 개발자 모집</td>
+                    <td>(주)비즈비</td>
+                    <td>경력 5~11년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52040542&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>퍼블+프론트 (React, SQL) 개발자 모집합니다.</td>
+                    <td>화이트정보통신(주)</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52264960&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[프리핀스]React프론트엔드 개발자 채용(경력)</td>
+                    <td>(주)프리핀스</td>
+                    <td>경력 2~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52054676&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React프론트엔드 경력직 모집</td>
+                    <td>(주)메타몬스터</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52246918&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Java &amp;React경력직 개발자 모집</td>
+                    <td>(주)글로벌엔씨</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52140684&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>FrontEnd 개발자 채용 -react/ next.js 기반</td>
+                    <td>(주)시제</td>
+                    <td>경력 3~6년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52167346&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[코드비] 영등포 IT 스타트업React개발자 상시모집</td>
+                    <td>코드비</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52207210&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[투네이션]프론트엔드React개발자를 모집합니다.(4년 이상)</td>
+                    <td>(주)투네이션</td>
+                    <td>경력 4~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52100044&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React/자바 개발자 경력직 모집</td>
+                    <td>(주)해주세요컴퍼니</td>
+                    <td>경력 3~6년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52155558&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React및 Vue.js 경력자 채용</td>
+                    <td>(주)이지원</td>
+                    <td>경력 5~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52229335&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[S/W개발본부]ReactNative 모바일 앱 개발자 모집</td>
+                    <td>주식회사 이터널</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52028675&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ReactNative 앱 개발자 모집</td>
+                    <td>(주)메타몬스터</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52204968&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[(주)더그리트] 프론트 개발자(React) 채용 (경력)</td>
+                    <td>(주)더그리트</td>
+                    <td>경력 5~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179509&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Jr.ReactFront-end Engineer</td>
+                    <td>올거나이즈코리아(주)</td>
+                    <td>경력 2~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52082093&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>2025년 하반기 경력자-React및 Next.js 채용</td>
+                    <td>(주)이지원</td>
+                    <td>경력 3~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52181502&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Frontend 개발자 채용 (React)</td>
+                    <td>(주)에이알247</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51885021&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 신입/경력직 채용</td>
+                    <td>엔시큐어(주)</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52031029&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[투비소프트] 개발자 경력직 채용</td>
+                    <td>(주)투비소프트</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52240665&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React/ReactNative 프론트엔드 개발자</td>
+                    <td>페이워크(주)</td>
+                    <td>경력 3~8년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52204586&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React프론트엔드 개발자 모집</td>
+                    <td>주식회사온빛소프트</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52108876&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (TypeScript,React)</td>
+                    <td>미스터블루(주)</td>
+                    <td>경력 2~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52034387&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>App 개발자 (ReactNative)_9년 이상</td>
+                    <td>솔닥(주)</td>
+                    <td>경력 9~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52191967&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 모집</td>
+                    <td>(주)크립토랩</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52159208&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>App 개발자 (ReactNative)_6년 이상</td>
+                    <td>솔닥(주)</td>
+                    <td>경력 6~8년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52191985&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>엔피로지스(주) 웹프로그래머(JAVA, JS,React) 신입, 경력 채용</td>
+                    <td>엔피로지스(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52215832&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[퍼뮤니티]ReactNative /React프론트 개발자 채용</td>
+                    <td>(주)퍼뮤니티</td>
+                    <td>경력 2~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52161163&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>앱 개발자 (ReactNative, 2년 이상)</td>
+                    <td>(주)코딧</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51067920&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>App 개발자 (ReactNative)_3년 이상</td>
+                    <td>솔닥(주)</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52191996&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ReactNative 앱 풀스텍 개발자</td>
+                    <td>(주)에스피에이디</td>
+                    <td>경력 7~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52164388&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React프론트엔드 개발자 모집</td>
+                    <td>마이데이터(주)</td>
+                    <td>경력 5~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52232757&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>글로벌 모바일 개발자 (ReactNative)</td>
+                    <td>(주)카카오뱅크</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52212890&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[신입] 프론트엔드 개발자 채용</td>
+                    <td>인서트(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52205570&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (React/ Next.js) - 풀스택 확장 가능</td>
+                    <td>(주)엑스타</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52254197&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>App(ReactNative) 개발자(전문연구요원가능)</td>
+                    <td>(주)베스텔라랩</td>
+                    <td>경력 2~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52071860&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발 /REACT/ 프리랜서</td>
+                    <td>(주)마이플랫</td>
+                    <td>경력 6~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52188689&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[경력] 프론트엔드(React) 개발자 모집</td>
+                    <td>(주)천하이너스</td>
+                    <td>경력 5~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52080037&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>React개발자 모집</td>
+                    <td>마이데이터(주)</td>
+                    <td>경력 9~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52186899&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=70b24f5e-fff3-4e24-bfcd-be8c4aaa4c37"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 모집</td>
+                    <td>(주)솔텍시스템</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52058321&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[엔클라우드24] 프론트엔드, 웹퍼블리셔 개발자 모집</td>
+                    <td>(주)웰데이타시스템</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52121725&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[KT마켓] 프론트엔드 개발자 모집 (React, Framer)</td>
+                    <td>케이티마켓</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51898695&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[브라운백]React기반 Android App 개발자 (경력 5년 이상)</td>
+                    <td>브라운백(주)</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52181771&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[이트라이브] 웹개발자 정규직 채용(풀스텍 지향)</td>
+                    <td>(주)이트라이브</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52080012&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>웹프론트엔드 개발자(유니콘)</td>
+                    <td>(주)핀다</td>
+                    <td>경력 1~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52237552&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발 경력자(2년 이상) 모집</td>
+                    <td>(주)엘핀</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51891176&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[재택근무]REACT· PHP · PYTHON 개발자 모집</td>
+                    <td>행복쇼핑(주)</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51996139&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>크로스플랫폼 앱 개발자 (Flutter /ReactNative)</td>
+                    <td>바이런베이</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52262459&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[코드라인] 프론트엔드 개발자 모집</td>
+                    <td>(주)코드라인</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52031234&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>DROP [ReactNative , 풀스택개발자 모집 ]</td>
+                    <td>(주)피플모빌리티</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52020024&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드(Frontend)-3년이상</td>
+                    <td>(주)아이오트러스트</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52070690&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>웹프론트엔드 개발자</td>
+                    <td>(주)핀다</td>
+                    <td>경력 4~6년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52178607&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Flutter 모바일 개발자 모집 공고</td>
+                    <td>(주)엠에스링크앤솔루션</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52098239&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)포시에스 웹개발자 채용 (경력)</td>
+                    <td>(주)포시에스</td>
+                    <td>경력 5~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51863512&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>웹/앱 프런트 및 백엔드 프로그래머를 모십니다.</td>
+                    <td>㈜폴리큐브</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52139656&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Frontend Engineer (Developer Platform)</td>
+                    <td>라인플러스(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52126950&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>네이블 Backend 개발자 및 Frontend 개발자 채용</td>
+                    <td>(주)네이블</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52015776&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Node.JS / PHP(그누보드) 웹 개발자 모집 (경력 2년 이상)</td>
+                    <td>(주)세미콜론즈</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52087234&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>공공배달앱(주)먹깨비 개발직군(React/PHP) 채용</td>
+                    <td>(주)먹깨비</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52240119&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>소프트웨어 개발자 채용 (신입/경력)</td>
+                    <td>(주)에이핀아이앤씨</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52087169&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[안랩-제이슨] 프론트엔드개발자 모집(JSP/jQuery)</td>
+                    <td>(주)제이슨</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51943793&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>응용 프로그램 개발자 또는 웹 개발자 (신입, 경력 가능)</td>
+                    <td>라온엑스솔루션즈(주)</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51805068&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>웹 프론트엔드 개발자 신입/경력 모집</td>
+                    <td>(주)헬로솔루션</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52201296&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(기업부설연구소) 모바일 네이티브 풀스택 개발자를 모십니다</td>
+                    <td>(주)아이오티플렉스</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179244&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 경력</td>
+                    <td>(주)에쓰씨케이</td>
+                    <td>경력 2~3년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52040197&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (리더,React.js 5년 이상)</td>
+                    <td>(주)코딧</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51067805&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NINEFIVE] 웹퍼블리셔 및 프론트엔드 개발자 병역특례 채용</td>
+                    <td>나인파이브(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51893014&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Java 개발자 / 정규직 / 과장, 차장</td>
+                    <td>(주)스톤인테그리티</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51816622&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ReactNative Developer</td>
+                    <td>(주)비바이노베이션</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52154892&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[웹개발] 업무용 웹(JAVA) 개발경력직 모집</td>
+                    <td>(주)한얼아이티</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179577&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[BU바움] 프론트엔드(웹/앱) 개발자 채용</td>
+                    <td>비유바움(주)</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52108956&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>풀스택 개발자</td>
+                    <td>(주)데이터드리븐</td>
+                    <td>경력 1~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52065292&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[신입 가능]풀스택 개발자 채용(채용시 마감)</td>
+                    <td>(주)뉴제스트</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51916091&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트 개발자 (React/ReactNative)</td>
+                    <td>(주)낭만상회</td>
+                    <td>경력 5~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52249997&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>경력 3년이상 백엔드 Java/SpringBoot 개발자</td>
+                    <td>빅스데이터(주)</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52080238&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[세르딕] 프론트엔드 개발자 채용</td>
+                    <td>(주)세르딕</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52198270&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Flutter 개발자</td>
+                    <td>(주)코보시스</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52207120&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[경력무관] 웹 어플리케이션 개발자 모집</td>
+                    <td>(주)투곰스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52171004&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 엔지니어</td>
+                    <td>(주)브이엔티지</td>
+                    <td>경력 3~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52040250&amp;location=ts&amp;searchword=react&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=b9af196d-0d5b-4f86-8b26-f00e93d010c0"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>강서구 제조업체 자바 react개발자 구함</td>
+                    <td>㈜오픈에스티</td>
+                    <td>경력6년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47999622?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=1&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[5그릿츠] React 프론트/백엔드 개발자 채용</td>
+                    <td>㈜5그릿츠</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47888318?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=2&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>LG.com 개발 및 운영 Java, React, TypeScript</td>
+                    <td>㈜미래아이씨티</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47991919?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=3&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[씨엔넷] React 프론트엔드 개발자 채용 - 경력</td>
+                    <td>㈜씨엔넷</td>
+                    <td>[씨엔넷] React 프론트엔드 개발자 채용 - 경력</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47712930?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=4&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[코드비] React 전문 개발자 상시모집</td>
+                    <td>코드비</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47982842?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=5&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>자바/react 프론트 중/고급 구합니다(판교)</td>
+                    <td>㈜성우정보</td>
+                    <td>경력6년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48002934?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=6&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[남부터미널역] K사 React 개발자 모집</td>
+                    <td>에스큐아이소프트㈜</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47918729?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=7&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>React(Front/End) 경력 개발자 채용</td>
+                    <td>몽타</td>
+                    <td>React(Front/End) 경력 개발자 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47902737?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=8&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Java 풀스택 (react) 고급 개발자 프리랜서</td>
+                    <td>㈜애버커스</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47985618?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=9&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>쇼핑몰 시스템 DB암호화 개발 (JAVA/React)</td>
+                    <td>㈜컴패니언시스템</td>
+                    <td>경력7년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47978764?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=10&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[연구본부] DevOps 자동화 시스템 Frontend개발자 (React.js)</td>
+                    <td>㈜티맥스티베로</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47806704?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=11&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>은행 로그 모니터링 솔루션 업무 (react, node.js 프리랜서)</td>
+                    <td>㈜벨류라인</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47863256?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=12&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Java, react , jsp등 3년이상 개발자 경력자 채용</td>
+                    <td>아이씨엠엔㈜</td>
+                    <td>Java, react , jsp등 3년이상 개발자 경력자 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47977944?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=13&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Frontend Developer (React)</td>
+                    <td>㈜디렉셔널</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47905513?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=14&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>빅데이터 플랫폼 개발 경험자 모집(Java/Python/ETL/Airflow/React)</td>
+                    <td>㈜엔에프에스시스템</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48006176?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=15&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>프론트엔드 UI/공통개발 Java/React개발자 모집</td>
+                    <td>㈜엔에프에스시스템</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48006079?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=16&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[골프 IT] APP/React Native 개발자 경력 채용</td>
+                    <td>㈜크리에이츠</td>
+                    <td>[골프 IT] APP/React Native 개발자 경력 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47991438?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=17&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>공공배달앱(주)먹깨비 개발부문(React / PHP) 경력직 채용</td>
+                    <td>㈜먹깨비</td>
+                    <td>공공배달앱(주)먹깨비 개발부문(React / PHP) 경력직 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47997447?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=18&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>개발/을지로/11.17-26.04.17/고급,aa/java,React,Biz-Actor외,/등 상세참조</td>
+                    <td>㈜조인아이티</td>
+                    <td>경력9년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47942562?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=19&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>2025년 11월 한미그룹 수시채용 [각 부문별]</td>
+                    <td>한미그룹</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47962351?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=20&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>쇼핑몰 시스템 DB암호화 개발 (JAVA/React)</td>
+                    <td>㈜컴패니언시스템</td>
+                    <td>경력7년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47978764?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=9&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>은행 로그 모니터링 솔루션 업무 (react, node.js 프리랜서)</td>
+                    <td>㈜벨류라인</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47863256?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=10&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Java 풀스택 (react) 고급 개발자 프리랜서</td>
+                    <td>㈜애버커스</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47985618?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=11&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[연구본부] DevOps 자동화 시스템 Frontend개발자 (React.js)</td>
+                    <td>㈜티맥스티베로</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47806704?Oem_Code=C1&amp;logpath=1&amp;stext=react&amp;listno=12&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Made with Flask, BeautifulSoup, Playwright & Pico CSS</p>
+    </footer>
+
+    <div style="margin-top:20px;text-align:center">
+        <a href='react-jobs.csv' download>
+            📥 Download React Jobs (CSV)
+        </a>
+    </div>
+
+</body>
+
+</html>

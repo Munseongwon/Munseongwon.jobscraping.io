@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python Jobs - Job Scraper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .source-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .job-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .job-link:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>🔍 Job Scraper</h1>
+        <p>잡코리아, 사람인, 원티드에서 채용 공고를 스크래핑합니다</p>
+    </div>
+    <nav class="nav">
+        <a href="index.html" role="button">← 돌아가기</a>
+        <a href="python.html" role="button">🐍 Python</a>
+        <a href="react.html" role="button">🎇React</a>
+        <a href="javascript.html" role="button">⚡ JavaScript</a>
+        <a href="java.html" role="button">☕ Java</a>
+        <a href="go.html" role="button">🏃‍♀️ Go</a>
+        <a href="python-jobs.csv" donwload role="button">💾 CSV로 내보내기</a>
+    </nav>
+    <main>
+        <h2>Python 채용 공고</h2>
+        <div class="stats">
+            <p>총 223개의 공고가 검색되었습니다.</p>
+            <p><small>마지막 업데이트: 2025-11-11 00:00:18</small></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>출처</th>
+                    <th>직무</th>
+                    <th>회사</th>
+                    <th>경력</th>
+                    <th>설명</th>
+                    <th>링크</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Global Business Manager</td>
+                    <td>글루가(ohora/오호라)</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315427" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Solution Engineer (주니어)</td>
+                    <td>클럼엘</td>
+                    <td>경력 2-4년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306440" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 엔지니어</td>
+                    <td>콘센트릭스서비스코리아CATALYST</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/274337" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 분석 엔지니어 (3년 이상)</td>
+                    <td>그래비티랩스</td>
+                    <td>경력 3-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/320348" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>생성형 AI 자동화 SW 개발 (로보틱스 LLM/RAG)</td>
+                    <td>비전스페이스</td>
+                    <td>경력 1-20년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/310263" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 엔지니어(5년 이상)</td>
+                    <td>이노케어플러스</td>
+                    <td>경력 5-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315674" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>BI퍼블리싱팀- 데이터 인텔리전스 사업PM (3년 이상)</td>
+                    <td>트리노드</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/317685" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>백엔드 개발자 (2~10년)</td>
+                    <td>뱅크엑스</td>
+                    <td>경력 2-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318051" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>반도체·스마트팩토리 물류 제어 S/W 프론트 개발자(React)</td>
+                    <td>주밍코리아</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306476" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[데이터허브] Software Engineer, Backend 개발자</td>
+                    <td>기웅정보통신</td>
+                    <td>경력 5-16년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318534" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>강화학습 Reinforcement Learning Engineer(전문연)</td>
+                    <td>플라잎</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315743" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI Engineer - 3년 이상</td>
+                    <td>샵라이브</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/284491" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Data Engineer(3년 이상)</td>
+                    <td>비에이치에스엔</td>
+                    <td>경력 3-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/284124" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 사이언티스트 (DS)</td>
+                    <td>미트박스글로벌</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/307460" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>시니어 백엔드 엔지니어 (Python)</td>
+                    <td>엘리스</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/230306" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI Vision Engineer / 전문연구요원 가능</td>
+                    <td>플라잎</td>
+                    <td>경력 1-7년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316002" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>BE Engineer (Python, Django, DRF) (3년/전문연 가능)</td>
+                    <td>소크라에이아이</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/309404" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Payment Backend Engineer (Python)</td>
+                    <td>앤서스랩코리아</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316783" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 프론트엔드 개발자 (5년차 이상)</td>
+                    <td>뉴스젤리(Newsjelly)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296319" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Junior Software Engineer, Backend (SaaS)</td>
+                    <td>어니스트에이아이</td>
+                    <td>경력 3-6년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312408" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>백엔드 엔지니어 (파이썬)</td>
+                    <td>블루밍비트</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318163" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Data Engineer</td>
+                    <td>앰버로드</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/290983" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[AI사업] AI 서비스 백엔드 개발자</td>
+                    <td>누리미디어(DBpia)</td>
+                    <td>경력 5-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/277890" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 엔지니어</td>
+                    <td>청담미디어</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315303" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python Algorithm Engineer</td>
+                    <td>제너레잇</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/288502" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Product Data Analyst (5년차 이상)</td>
+                    <td>와드(캐치테이블)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/273027" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[에누리개발본부] 검색엔진 개발</td>
+                    <td>커넥트웨이브</td>
+                    <td>경력 5-12년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/239746" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI Engineer (LLM, RAG)</td>
+                    <td>퍼슬리</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316470" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI설문조사 플랫폼 Data Scientist / LLM Researcher</td>
+                    <td>인텔리시아</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/286089" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터사이언티스트</td>
+                    <td>페이블랩</td>
+                    <td>경력 4년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/308210" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 플랫폼 엔지니어 (크롤링 전문가)</td>
+                    <td>콘센트릭스서비스코리아CATALYST</td>
+                    <td>경력 1년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/319941" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Vision AI 분석엔진 코어 개발 및 유지보수</td>
+                    <td>씨이랩</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/303825" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python Engineer (LLM &amp; Remote Sandbox)</td>
+                    <td>포지큐브(POSICUBE)</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/297551" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>백엔드 개발자</td>
+                    <td>가이아코퍼레이션</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/310161" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 플랫폼 개발 풀스택</td>
+                    <td>비전스페이스</td>
+                    <td>경력 1-20년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/310265" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>BizOps Software Engineer (8년 차 이상)</td>
+                    <td>와드(캐치테이블)</td>
+                    <td>경력 8년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313559" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI/로봇 엔지니어</td>
+                    <td>파이브레인 에이아이</td>
+                    <td>경력 1년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/314788" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI Agent 개발 리더</td>
+                    <td>빅스데이터</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316640" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 분석가</td>
+                    <td>기어세컨드</td>
+                    <td>경력 2-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/247524" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Sr. Deep Learning Algorithm Engineer</td>
+                    <td>스트라드비젼(STRADVISION)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315756" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Embedded firmware Engineer (임베디드 펌웨어 개발, EE)</td>
+                    <td>식스티헤르츠</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/305633" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Software Engineer(Full-stack - Frontend Focus)</td>
+                    <td>알세미</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/313802" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>시니어 AI 엔지니어 (NLP/LLM)</td>
+                    <td>웨이커</td>
+                    <td>경력 9년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/306059" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Gen AI Consultant</td>
+                    <td>에프피티소프트웨어코리아</td>
+                    <td>경력 8년 이상 · 계약직</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/316511" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>백엔드 개발자 (Python / 3년 이상)</td>
+                    <td>더페어골프</td>
+                    <td>경력 3-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/311356" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI Researcher(LLM)</td>
+                    <td>몬드리안에이아이</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/283459" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 개발자 (API Product)</td>
+                    <td>네오사피엔스(타입캐스트)</td>
+                    <td>경력 7년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315369" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>시스템 엔지니어 - IT 솔루션 구축 및 장애 대응</td>
+                    <td>팀벨</td>
+                    <td>경력 1년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/311936" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python Backend Developer</td>
+                    <td>크로스이엔에프</td>
+                    <td>경력 5-8년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/238973" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 엔지니어 (1년 ~ 5년)</td>
+                    <td>닥터스바이오텍</td>
+                    <td>경력 1-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315765" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python 개발자 (5년 이상)</td>
+                    <td>씨어스테크놀로지</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296553" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Software Engineer(HW/SW 융합시스템)</td>
+                    <td>오엔제이</td>
+                    <td>경력 7년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/305744" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python 개발자 (계약직)</td>
+                    <td>씨피에스테크</td>
+                    <td>경력 2년 이상 · 계약직</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312685" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>마케팅 데이터 엔지니어</td>
+                    <td>어센트코리아(Ascent Korea)</td>
+                    <td>경력 1-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/301034" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[Internal Agent팀] Agent Developer</td>
+                    <td>뤼튼테크놀로지스</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/299713" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Django 백엔드 개발자</td>
+                    <td>알리콘</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/314914" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>[메가스터디교육 자회사] AI 개발자</td>
+                    <td>마이스</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/318515" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>ML Engineer(LLM/AI Agent) - 병역특례/외국인 가능</td>
+                    <td>심플랫폼</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/303864" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>파이썬 백엔드 개발자 (5 ~ 15년)</td>
+                    <td>지니파이</td>
+                    <td>경력 5-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315965" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python Developer</td>
+                    <td>스피어코퍼레이션</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/290047" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>웹 백엔드 개발자 (5년차 이상)</td>
+                    <td>뉴스젤리(Newsjelly)</td>
+                    <td>경력 5년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296313" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AMCG 연구그룹 알고리즘(팀장급) 포지션</td>
+                    <td>에이엠시지(AMCGCo.Ltd.)</td>
+                    <td>경력 10-20년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/286385" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>시니어 백엔드 개발자 (Node.js, 5년 이상)</td>
+                    <td>코딧(CODITCorp.)</td>
+                    <td>경력 5-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/46260" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Junior ADs Data Scientist</td>
+                    <td>아티스트컴퍼니</td>
+                    <td>경력 2-5년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315017" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 사이언티스트(2년 이상)</td>
+                    <td>에이드리븐</td>
+                    <td>경력 2년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/296601" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>풀스택 Engineer (솔루션 사업부)</td>
+                    <td>오토메타</td>
+                    <td>경력 3-11년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/162074" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Algorithm Engineer</td>
+                    <td>스트라드비젼(STRADVISION)</td>
+                    <td>신입 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/301741" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>Python 개발자 (금융, 마이데이터)</td>
+                    <td>왓섭</td>
+                    <td>경력 3-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/304327" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>AI 데이터 전처리 개발</td>
+                    <td>씨드로닉스</td>
+                    <td>경력 3년 이상</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/295760" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>rPPG / 생체 신호 / 영상 분석 딥러닝 연구원 (석박사급)</td>
+                    <td>바이오커넥트</td>
+                    <td>경력 1-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/312478" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>클라우드 개발자(백엔드/DevOps)</td>
+                    <td>파이오링크</td>
+                    <td>경력 1-10년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/281795" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Wanted</td>
+                    <td>데이터 엔지니어 (3년 이상)</td>
+                    <td>워트인텔리전스</td>
+                    <td>경력 3-15년</td>
+                    <td></td>
+                    <td><a href="https://www.wanted.co.kr/wd/315865" target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[정규직] AI 개발자 (Python개발)</td>
+                    <td>(주)퀸텟시스템즈</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52086864&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Linux/Unix기반 개발자(경력) 모집 (C,Go,Python)</td>
+                    <td>(주)지란지교에스앤씨</td>
+                    <td>경력 1~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52144929&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ocr 솔루션(java,python),검색엔진 개발 신입/경력직 채용</td>
+                    <td>(주)웨어비즈</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52018174&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[경력] Solution/SW 개발자 채용 - Java/Python</td>
+                    <td>(주)위존</td>
+                    <td>경력7년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52033951&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python개발자 경력 채용</td>
+                    <td>(주)씨어스테크놀로지</td>
+                    <td>경력 5~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52010486&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python개발자 채용</td>
+                    <td>(주)엠클라우독</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51899238&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[안랩-제이슨]Python파이썬 개발자 모집</td>
+                    <td>(주)제이슨</td>
+                    <td>경력 3~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52080882&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>데이터플로 파이썬 개발자 채용 - 웹크롤링 및 데이터 처리</td>
+                    <td>데이터플로</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52115934&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[대전] 데이터허브 구축 파이션(Python) 개발자</td>
+                    <td>(주)에스티로직</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52098532&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[이수그룹 IT계열사]Python연구/개발 담당자 채용</td>
+                    <td>(주)이수시스템</td>
+                    <td>경력 4~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52008106&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[PYTHONSI 을지로3가] Python 기반 LLM 자동화 (10)</td>
+                    <td>(주)제이투이</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52130737&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[플랜아이] 개발자 채용 PHP WEB, AI(Python)</td>
+                    <td>(주)플랜아이</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51816229&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[테나아이] 백엔드(Java,Python) 개발자 모집</td>
+                    <td>(주)테나아이</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52015701&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[계약직]Python기반 자연어처리(NLP) AI 개발자 경력직 채용</td>
+                    <td>(주)바이브컴퍼니</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52251168&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[슈프리마]Python개발자(해외기술지원 AI Chatbot&amp;데이터 운영)</td>
+                    <td>(주)슈프리마</td>
+                    <td>경력 3~8년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51922426&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python워크플로우 자동화 개발자 (RPA)</td>
+                    <td>엑스보스주식회사</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52042402&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[세종]Python개발자 채용</td>
+                    <td>(주)바이브컴퍼니</td>
+                    <td>경력 1~4년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52118025&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)프로텐 검색엔진 솔루션 JAVA/PYTHON개발자 모집</td>
+                    <td>(주)프로텐</td>
+                    <td>경력 1~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52105591&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>VISION AI 솔루션Python웹서비스 백엔드 개발(3년~5년)</td>
+                    <td>(주)에이아이썸</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179349&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>데이터분석/Python/JAVA/SAS 인재 채용/서비스기획</td>
+                    <td>(주)그루넷</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52165237&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>PythonRAG Pipeline Engineer (신입, 경력)</td>
+                    <td>(주)포지큐브</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179248&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>VISION AI 솔루션Python웹서비스 백엔드 개발(6년~10년)</td>
+                    <td>(주)에이아이썸</td>
+                    <td>경력 6~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179360&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>PythonDeveloper (ERP 담당) 채용</td>
+                    <td>주식회사 스피어코퍼레이션</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51834134&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python백엔드 개발자 채용 (파이썬)</td>
+                    <td>루쿠쿠</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52118857&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python/ C#.NET 기반 프로그램 개발자 모집</td>
+                    <td>주식회사 썬컴</td>
+                    <td>경력 3~6년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51984055&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>backend (python) 개발자</td>
+                    <td>(주)씨메스</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52247778&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>인공지능 MLOps 플랫폼 백엔드 개발자 (파이썬/3년 이상)</td>
+                    <td>(주)텐</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52019685&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>디클(주) - 파이썬Python개발자 프로그래머 채용</td>
+                    <td>디클(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51963515&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>파이썬 개발자 모집</td>
+                    <td>망고클라우드(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52232837&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python개발자 (백엔드 엔지니어)</td>
+                    <td>(주)마인드에이아이</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52066810&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 개발자 채용 (Python경력)</td>
+                    <td>에이치에스소프트(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52209068&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Python, DJango/DJangoRestframework 웹개발자</td>
+                    <td>클립데이터(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52139370&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NIKE PARTNER] 파이썬 back-end 개발자(신입) 채용</td>
+                    <td>(주)대연</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52059894&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)ISTN [Agentic AI 개발자] 채용</td>
+                    <td>(주)아이에스티엔</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51902264&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[백엔드/서버개발] Php,Python솔루션 개발자 모집</td>
+                    <td>(주)웨이브스트링</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52251823&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>파이썬(Python) 기반의 풀스택 개발자 모십니다.</td>
+                    <td>(주)케이엘피</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52251087&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>파이썬 초/중급 개발자</td>
+                    <td>(주)씨텍</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51805179&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[국비무료IT취업]자바파이썬/웹개발/빅데이터/인공지능 외</td>
+                    <td>(사)한국아이씨티에이아이기술협회</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52032492&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NIKE PARTNER] 파이썬 back-end 개발자(경력) 채용</td>
+                    <td>(주)대연</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52059992&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>생성형 AI 빅데이터 마케팅 플랫폼 데이터엔지니어(python)채용</td>
+                    <td>(주)빅링크에이아이</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52072460&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=190e89a1-5ea3-42c3-90df-c72bf61db80f"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>모터센스 시니어 백엔드 개발자(Python)</td>
+                    <td>(주)이파피루스</td>
+                    <td>경력 7~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52253475&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 어플리케이션 개발자 모집</td>
+                    <td>(주)엘핀</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52076943&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>개발자(파이썬 / 자동수집, 크롤링)</td>
+                    <td>(주)옥션원</td>
+                    <td>경력 3~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52095711&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(경력) 솔루션 개발 및 유지 (Vue.js,Python, JAVA) 추가모집</td>
+                    <td>(주)안다미컴퍼니</td>
+                    <td>경력 2~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51937869&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)옥션원 개발자(파이썬 / 자동수집, 크롤링) 모집</td>
+                    <td>(주)옥션원</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52095332&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[웹개발] CRM 관리 PHP 자바 파이선</td>
+                    <td>(주)에코바이오의학연구소</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52160692&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 서비스 개발자 채용 (신입/경력)</td>
+                    <td>(주)테이슨</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52047812&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[미디어젠(주)] 파이썬 백엔드/서버 개발자(경력)</td>
+                    <td>미디어젠(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52242216&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(Python) 개발 경력자 모집</td>
+                    <td>(주)휴먼딥</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52156030&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[경력]Python기반 ETL 및 운영 데이터 엔지니어 개발자 (부산)</td>
+                    <td>(주)뉴로코어</td>
+                    <td>경력 5~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52095265&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[Catalyst] 생성형 AIPythonFullstack 개발자</td>
+                    <td>콘센트릭스서비스코리아(유)</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52081518&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[다이퀘스트] LLM 및 딥러닝 기반 솔루션 개발(신입/경력/병특)</td>
+                    <td>(주)다이퀘스트</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51912856&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[폴라리스AI] AI 서비스 개발자 채용</td>
+                    <td>(주)폴라리스에이아이</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52013030&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백엔드 개발자 (Replication)</td>
+                    <td>오케스트로(주)</td>
+                    <td>경력 3~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52029926&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[데이터분석] 파이썬 백엔드(사전 인터뷰 필독)</td>
+                    <td>(주)비타</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52001474&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[핀테크/python/정규] Back-end Engineer (5년 이상)</td>
+                    <td>(주)파운트</td>
+                    <td>경력 5~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52088984&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백엔드 개발자 (DR Solution)</td>
+                    <td>오케스트로(주)</td>
+                    <td>경력 3~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52030029&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[시차출퇴근제] SW 엔지니어 모집 (C/C++,C#,Python)</td>
+                    <td>비앤에프테크놀로지(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52214065&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[AI 클라우드 SW] 백엔드/프론트엔드/앱 개발자 채용</td>
+                    <td>(주)인티그리트</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52177472&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>주식회사편안랩스 JAVA,Python개발자 채용</td>
+                    <td>주식회사편안랩스</td>
+                    <td>경력 3~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51935589&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>JuniorPythonBackend</td>
+                    <td>(주)샐러드랩</td>
+                    <td>경력 1~3년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52081915&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>신입 개발자 모집</td>
+                    <td>㈜네오메카</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52034531&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백앤드/모바일 SW개발자 (신입/경력)</td>
+                    <td>(주)테이슨</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52071227&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>데이터 정규화 AI시스템 개발 경력 채용/전문연구요원 우대</td>
+                    <td>슈어소프트테크(주)</td>
+                    <td>경력 2~7년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52261408&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[인공지능솔루션] 엔지니어 직군 채용</td>
+                    <td>(주)제논</td>
+                    <td>경력 1~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179525&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[엔키화이트햇] RedOps 2팀 : 내부 침투 연구원</td>
+                    <td>(주)엔키화이트햇</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52254081&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>클라우드 신입/경력 개발자 모집(백엔드/DevOps)</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52007750&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[다이퀘스트] JAVA 및 WEB 개발자 모집 (경력) (융합그룹)</td>
+                    <td>(주)다이퀘스트</td>
+                    <td>경력 5~12년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52130308&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[코스닥 상장사] 전문연구요원 어플리케이션 및 클라우드 개발자</td>
+                    <td>(주)파이오링크</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52006529&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>SW 개발 신입 / 경력자(PL) 채용</td>
+                    <td>마인드원(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52166362&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Back-End 개발자 채용</td>
+                    <td>(주)씨어스테크놀로지</td>
+                    <td>경력 5~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52202598&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>DevOps Engineer(TA/AA) 채용</td>
+                    <td>오케스트로(주)</td>
+                    <td>경력 2~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52069932&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>개발자(백엔드,AI NLP,AI 데이터처리) 신입/경력 모집</td>
+                    <td>(주)엔디소프트</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52202414&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[미소정보기술] 빅데이터 및 인공지능 플랫폼 설계/개발자(PL)</td>
+                    <td>(주)미소정보기술</td>
+                    <td>경력 5~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52014104&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[전문연구요원] 클라우드 개발자 모집 (백엔드/DevOps)</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52007635&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[경력] SaaS 개발자 채용</td>
+                    <td>(주)위존</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52204048&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>마켓빌리 JAVA / DBA / TA / AA /PYTHONRecruitment</td>
+                    <td>플러거</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52174808&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 서비스 백엔드 개발자(3년 이상)</td>
+                    <td>(주)네비웍스</td>
+                    <td>경력 3~10년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52253723&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[다이퀘스트] JAVA 및 WEB 개발자 모집 (경력직/병특) (솔루션)</td>
+                    <td>(주)다이퀘스트</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51912697&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 개발자 채용 (경력 / AI 프로젝트 경험 신입 지원 가능)</td>
+                    <td>(주)푸마시에이아이</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52121127&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1528002c-8b84-43cf-a162-78093622791e"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[프람트테크놀로지] 소프트웨어 개발분야 정규직 신입사원 채용</td>
+                    <td>(주)프람트테크놀로지</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52018884&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백엔드 엔지니어 (Python) 채용</td>
+                    <td>(주)유니아이</td>
+                    <td>경력 3~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52053905&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>퓨처메인 AI, 머신러닝 엔지니어 채용</td>
+                    <td>퓨처메인(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52047388&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 알고리즘 개발자 채용</td>
+                    <td>(주)코난테크놀로지</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52140806&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>어플리케이션 및 클라우드 개발</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력 3~13년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52030926&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NAVER Cloud] Cloud DB Platform Engineer (DBA) (경력)</td>
+                    <td>네이버클라우드(주)</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52216669&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>IT/AI부문(전문연구요원 포함)신입</td>
+                    <td>(주)연합인포맥스</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52041475&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프론트엔드 개발자 (React / Next.js /Python)</td>
+                    <td>예진(주)</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52269812&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>데이터엔지니어(MS) 채용(신입)</td>
+                    <td>엠클라우드브리지(주)</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52054088&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[(주)신라시스템] 데이터분석 &amp; 인공지능 개발자 공채</td>
+                    <td>(주)신라시스템</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52099398&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)위존 AI(LLM) 엔지니어 모집</td>
+                    <td>(주)위존</td>
+                    <td>경력 5~15년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51908279&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NHN] 웹서비스 백엔드 개발</td>
+                    <td>엔에이치엔(주)</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52082082&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Front/BackEnd UI/UX 개발자 모집(React/Python)</td>
+                    <td>(주)유엠아이옵틱스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52106733&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[AX] 백엔드 개발자 채용 (AI 활용)</td>
+                    <td>(주)에이엑스</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52268301&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>WEBFRONT-K 웹보안기능 / 시그니처개발</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력 3~13년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52030939&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>(주)NSHC 위협분석 연구소(ThreatRecon) 경력 개발자 채용</td>
+                    <td>(주)엔에스에이치씨</td>
+                    <td>경력4년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51986848&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[통신사] STAGE FIVE &#39;AI Agent 개발자&#39; 채용</td>
+                    <td>(주)스테이지파이브</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52205694&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[코스닥 상장사] 어플리케이션 및 클라우드 경력 개발자 모집</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력 3~13년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52007770&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>PythonBack-end Enginner</td>
+                    <td>올거나이즈코리아(주)</td>
+                    <td>경력 2~5년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52082125&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[코스닥 상장사]WEBFRONT-K웹 보안 기능 및 시그니처 개발자모집</td>
+                    <td>(주)파이오링크</td>
+                    <td>경력 3~13년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52007538&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[AICESS] 윈도우 애플리케이션 개발자 채용</td>
+                    <td>(주)에이아이세스</td>
+                    <td>경력 8~20년</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52032556&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[NHN Cloud 2025년 하반기 집중채용] 클라우드 백엔드 개발</td>
+                    <td>엔에이치엔(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51965105&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>신제품개발 경력개발자(JAVA, C)</td>
+                    <td>(주)에스앤케이인스티튜트</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52128914&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프로그램 개발자 모집</td>
+                    <td>(주)스카이소프트젤</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52166874&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>머신러닝 엔지니어 O명 모집</td>
+                    <td>(주)누리랩</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52189615&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>백엔드(서버) 및 프론트 개발 인력 채용</td>
+                    <td>(주)엠넥스</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52202535&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI Engineer</td>
+                    <td>이마고웍스(주)</td>
+                    <td>신입</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52130247&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>주식회사 엠케이디 Java, Node,Python개발자 모집</td>
+                    <td>주식회사엠케이디(MKDCo.,Ltd)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52097482&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[PYTHON/ETL SI 인천] 통합시설관리시스템 구축 사업 (7)</td>
+                    <td>(주)제이투이</td>
+                    <td>경력7년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52179311&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 엔지니어 - AI 플랫폼</td>
+                    <td>(주)카카오페이</td>
+                    <td>경력5년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52166780&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[(주)토마토시스템] AIQBot 솔루션 개발자 채용(경력)</td>
+                    <td>(주)토마토시스템</td>
+                    <td>경력8년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52175776&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>프로그램 개발자 채용 (Phython 개발자 우대)</td>
+                    <td>(주)데이타프로텍</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52033207&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[개발/엔지니어] Golang / Java / Engineer</td>
+                    <td>(주)엑셈</td>
+                    <td>신입·경력</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52169661&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>ITO(AA, Managed Service Engineer)</td>
+                    <td>메가존클라우드(주)</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51899662&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[서울] AI 플랫폼 개발 경력직 채용</td>
+                    <td>(주)클루닉스</td>
+                    <td>경력8년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52204890&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 개발경력자 채용</td>
+                    <td>㈜테르텐</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52160010&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[(주)아이젝스] 서버개발자 / DBA 채용 공고</td>
+                    <td>(주)아이젝스</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52191156&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>[에듀테크 벤처기업] 웹 개발자 채용(R&amp;D 과제 참여 개발자)</td>
+                    <td>커넥트밸류(주)</td>
+                    <td>경력8년↑</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51952792&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>AI 서비스 기획 및 Agentic AI 개발 담당자 모집(병역특례 가능)</td>
+                    <td>(주)게임스프링</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=51939447&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>Saramin</td>
+                    <td>Machine Vision 영상처리 개발자 모집</td>
+                    <td>(주)코눈</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&amp;rec_idx=52118960&amp;location=ts&amp;searchword=python&amp;searchType=search&amp;paid_fl=n&amp;search_uuid=1f511caa-88e6-48fd-94d2-c91e93545ecc"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[안랩-제이슨] Python 파이썬 개발자 모집</td>
+                    <td>제이슨</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47881293?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=1&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[PYTHON SI 판교] 데이터 표준화 및 데이터 마트 구축 PYTHON 개발 (7)</td>
+                    <td>㈜제이투이</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48004575?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=2&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>차량용 SW Test 자동화 검증(Python)</td>
+                    <td>㈜링크제니시스</td>
+                    <td>None</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47848214?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=3&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[한국의학연구소] RPA - 파이썬 개발자 모집</td>
+                    <td>(재) 한국의학연구소</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47748164?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=4&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>파이썬 개발자 모집</td>
+                    <td>그린에코스㈜</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47858204?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=5&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>디클(주) - 파이썬 Python 개발자 프로그래머 채용</td>
+                    <td>디클(주)</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47864159?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=6&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Mac Agent 파이썬 개발자 / Linux Agent 개발자 채용</td>
+                    <td>㈜아이젝스</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47963686?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=7&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>다축 로봇 제어 엔지니어(Python)</td>
+                    <td>㈜에이블랩스(ABLE Labs Inc.)</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47983238?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=8&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Python 백엔드 시스템 개발자 채용</td>
+                    <td>㈜디에스솔루션즈</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47882471?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=9&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>병역특례(산업기능요원-현역)엔이에스 채용(Python, 네트워크, 웹개발)</td>
+                    <td>㈜엔이에스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48004166?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=10&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>검색엔진 솔루션 개발자 모집( Java,Python )</td>
+                    <td>프로텐</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47899479?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=11&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[본사] Java / Python 활용 / 금융솔루션 개발자 채용 공고(경력/신입)</td>
+                    <td>㈜포이시스</td>
+                    <td>[본사] Java / Python 활용 / 금융솔루션 개발자 채용 공고(경력/신입)</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47806813?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=12&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[마감임박] 삼성 SSAFY 15기 모집 (5분만에 지원가능)</td>
+                    <td>삼성청년SW/AI아카데미</td>
+                    <td>None</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47840121?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=13&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Python 기반의 S/W Architect (소프트웨어 아키텍쳐)</td>
+                    <td>㈜프라임엔시스템</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47956120?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=14&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>C# (WPF, 유니티), 파이썬 개발자 모집</td>
+                    <td>㈜에스에이치엘에이비</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47978357?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=15&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[세종] Python 개발자 채용</td>
+                    <td>주식회사 바이브컴퍼니</td>
+                    <td>경력1년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47910715?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=16&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[계약직]Python 기반 자연어처리(NLP) AI 개발자 경력직 채용</td>
+                    <td>주식회사 바이브컴퍼니</td>
+                    <td>[계약직]Python 기반 자연어처리(NLP) AI 개발자 경력직 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48005529?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=17&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>현대홈쇼핑 11월 경력직 공고(DT, 정보보호, 정부ㆍ지자체 지원사업)</td>
+                    <td>㈜현대홈쇼핑</td>
+                    <td>현대홈쇼핑 11월 경력직 공고(DT, 정보보호, 정부ㆍ지자체 지원사업)</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47985274?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=18&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>빅데이터 플랫폼 개발 경험자 모집(Java/Python/ETL/Airflow/React)</td>
+                    <td>㈜엔에프에스시스템</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48006176?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=19&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>백엔드(Python, Node.js) 개발 경력 사원을 모집합니다.</td>
+                    <td>㈜인튜브</td>
+                    <td>백엔드(Python, Node.js) 개발 경력 사원을 모집합니다.</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47871973?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=20&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>검색엔진 솔루션 개발자 모집( Java,Python )</td>
+                    <td>프로텐</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47899479?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=8&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[본사] Java / Python 활용 / 금융솔루션 개발자 채용 공고(경력/신입)</td>
+                    <td>㈜포이시스</td>
+                    <td>[본사] Java / Python 활용 / 금융솔루션 개발자 채용 공고(경력/신입)</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47806813?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=9&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[마감임박] 삼성 SSAFY 15기 모집 (5분만에 지원가능)</td>
+                    <td>삼성청년SW/AI아카데미</td>
+                    <td>None</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47840121?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=10&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Python 기반의 S/W Architect (소프트웨어 아키텍쳐)</td>
+                    <td>㈜프라임엔시스템</td>
+                    <td>경력3년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47956120?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=11&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>C# (WPF, 유니티), 파이썬 개발자 모집</td>
+                    <td>㈜에스에이치엘에이비</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47978357?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=12&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>Python 백엔드 시스템 개발자 채용</td>
+                    <td>㈜디에스솔루션즈</td>
+                    <td>경력2년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47882471?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=13&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>다축 로봇 제어 엔지니어(Python)</td>
+                    <td>㈜에이블랩스(ABLE Labs Inc.)</td>
+                    <td>경력</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47983238?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=14&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>병역특례(산업기능요원-현역)엔이에스 채용(Python, 네트워크, 웹개발)</td>
+                    <td>㈜엔이에스</td>
+                    <td>경력무관</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48004166?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=15&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>현대홈쇼핑 11월 경력직 공고(DT, 정보보호, 정부ㆍ지자체 지원사업)</td>
+                    <td>㈜현대홈쇼핑</td>
+                    <td>현대홈쇼핑 11월 경력직 공고(DT, 정보보호, 정부ㆍ지자체 지원사업)</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/47985274?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=17&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>빅데이터 플랫폼 개발 경험자 모집(Java/Python/ETL/Airflow/React)</td>
+                    <td>㈜엔에프에스시스템</td>
+                    <td>경력10년↑</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48006176?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=18&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+                <tr>
+                    <td>JobKorea</td>
+                    <td>[계약직]Python 기반 자연어처리(NLP) AI 개발자 경력직 채용</td>
+                    <td>주식회사 바이브컴퍼니</td>
+                    <td>[계약직]Python 기반 자연어처리(NLP) AI 개발자 경력직 채용</td>
+                    <td></td>
+                    <td><a href="https://www.jobkorea.co.kr/Recruit/GI_Read/48005529?Oem_Code=C1&amp;logpath=1&amp;stext=python&amp;listno=19&amp;sc=630"
+                            target="_blank">보기</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Made with Flask, BeautifulSoup, Playwright & Pico CSS</p>
+    </footer>
+
+    <div style="margin-top:20px;text-align:center">
+        <a href='python-jobs.csv' download>
+            📥 Download Python Jobs (CSV)
+        </a>
+    </div>
+
+</body>
+
+</html>
